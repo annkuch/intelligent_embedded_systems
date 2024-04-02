@@ -1,6 +1,7 @@
-from agent.src.domain.gps import Gps
+from dataclasses import dataclass
+from domain.gps import Gps
 
+@dataclass
 class Parking:
-    def __init__(self, empty_count: int, gps: Gps) -> None:
-        self.empty_count = empty_count
-        self.gps = gps
+    empty_count: int
+    gps: Gps
